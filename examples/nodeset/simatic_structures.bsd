@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opc:TypeDictionary DefaultByteOrder="LittleEndian" TargetNamespace="http://www.siemens.com/simatic-s7-opcua"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:opc="http://opcfoundation.org/BinarySchema/"
+                    xmlns:ua="http://opcfoundation.org/UA/" xmlns:tns="http://www.siemens.com/simatic-s7-opcua">
+    <opc:Import Namespace="http://opcfoundation.org/UA/" Location="Opc.Ua.BinarySchema.bsd"/>
+    <opc:StructuredType BaseType="ua:ExtensionObject" Name="&quot;globalDB&quot;.&quot;UntypedStruct&quot;">
+        <opc:Field TypeName="opc:Int16" Name="structInt"/>
+    </opc:StructuredType>
+    <opc:StructuredType BaseType="ua:ExtensionObject" Name="&quot;udtDemo&quot;">
+        <opc:Field TypeName="opc:Int32" Name="myByteArray_Size"/>
+        <opc:Field TypeName="opc:Byte" Name="myByteArray" LengthField="myByteArray_Size"/>
+        <opc:Field TypeName="opc:Int16" Name="mySingleInt"/>
+        <opc:Field TypeName="tns:&quot;udtDemo2&quot;" Name="mySingleStruct"/>
+        <opc:Field TypeName="opc:Int32" Name="myStructArray_Size"/>
+        <opc:Field TypeName="tns:&quot;udtDemo2&quot;" Name="myStructArray" LengthField="myStructArray_Size"/>
+        <opc:Field TypeName="opc:String" Name="myString"/>
+    </opc:StructuredType>
+    <opc:StructuredType BaseType="ua:ExtensionObject" Name="&quot;udtDemo2&quot;">
+        <opc:Field TypeName="opc:Byte" Name="byteFirst"/>
+        <opc:Field TypeName="opc:Byte" Name="byteSecond"/>
+        <opc:Field TypeName="opc:Int16" Name="intFirst"/>
+        <opc:Field TypeName="opc:Int16" Name="intSecond"/>
+    </opc:StructuredType>
+</opc:TypeDictionary>

@@ -1,0 +1,9 @@
+SimaticOperatingState,3063,DataType
+"""udtDemo2""","s=DT_""udtDemo2""",DataType
+"""udtDemo""","s=DT_""udtDemo""",DataType
+"""globalDB"".""UntypedStruct""","s=DT_""globalDB"".""UntypedStruct""",DataType
+BYTE,3001,DataType
+SimaticStructures,3400,DataType
+STRING_SIMATIC,3014,DataType
+
+

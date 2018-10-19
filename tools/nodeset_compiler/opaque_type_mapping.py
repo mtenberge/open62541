@@ -123,6 +123,16 @@ opaque_type_mapping = {
         'ns': 0,
         'id': 13,
         'name': 'DateTime'
+    },
+    'BYTE': {
+        'ns': 0,
+        'id': 3,
+        'name': 'Byte'
+    },
+    'STRING_SIMATIC': {
+        'ns': 0,
+        'id': 12,
+        'name': 'String'
     }
 }
 

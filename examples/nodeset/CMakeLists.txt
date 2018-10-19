@@ -131,4 +131,63 @@ if(UA_NAMESPACE_ZERO STREQUAL "FULL")
         set_source_files_properties(${PROJECT_BINARY_DIR}/src_generated/ua_namespace_di.c PROPERTIES LANGUAGE CXX)
         set_source_files_properties(${PROJECT_BINARY_DIR}/src_generated/ua_namespace_plc.c PROPERTIES LANGUAGE CXX)
     endif()
+
+
+    # Generate types for simatic namespace
+    set(UA_TYPES_OUT "ua_types_simatic")
+    add_custom_command(OUTPUT ${PROJECT_BINARY_DIR}/src_generated/${UA_TYPES_OUT}_generated.c
+                       ${PROJECT_BINARY_DIR}/src_generated/${UA_TYPES_OUT}_generated.h
+                       ${PROJECT_BINARY_DIR}/src_generated/${UA_TYPES_OUT}_generated_handling.h
+                       ${PROJECT_BINARY_DIR}/src_generated/${UA_TYPES_OUT}_generated_encoding_binary.h
+                       PRE_BUILD
+                       COMMAND ${PYTHON_EXECUTABLE} ${PROJECT_SOURCE_DIR}/tools/generate_datatypes.py
+                       --namespace=4
+                       --type-csv=${PROJECT_SOURCE_DIR}/examples/nodeset/OpcUaSimaticModel.csv
+                       --type-bsd=${PROJECT_SOURCE_DIR}/examples/nodeset/Opc.Ua.Simatic.Types.bsd
+                       --no-builtin
+                       ${PROJECT_BINARY_DIR}/src_generated/${UA_TYPES_OUT}
+                       DEPENDS ${PROJECT_SOURCE_DIR}/tools/generate_datatypes.py
+                       ${PROJECT_SOURCE_DIR}/examples/nodeset/OpcUaSimaticModel.csv
+                       ${PROJECT_SOURCE_DIR}/examples/nodeset/Opc.Ua.Simatic.Types.bsd)
+    add_custom_target(open62541-generator-types-simatic DEPENDS ${PROJECT_BINARY_DIR}/src_generated/${UA_TYPES_OUT}_generated.c)
+
+    # generate simatic PLC namespace which is using DI
+    add_custom_command(OUTPUT ${PROJECT_BINARY_DIR}/src_generated/ua_namespace_simatic.c
+                       ${PROJECT_BINARY_DIR}/src_generated/ua_namespace_simatic.h
+                       PRE_BUILD
+                       COMMAND ${PYTHON_EXECUTABLE} ${PROJECT_SOURCE_DIR}/tools/nodeset_compiler/nodeset_compiler.py
+                       --internal-headers
+                       --types-array=UA_TYPES
+                       --types-array=UA_TYPES_DI
+                       --types-array=UA_TYPES_SIMATIC
+                       --existing ${PROJECT_SOURCE_DIR}/deps/ua-nodeset/Schema/Opc.Ua.NodeSet2.xml
+                       --existing ${PROJECT_SOURCE_DIR}/deps/ua-nodeset/DI/Opc.Ua.Di.NodeSet2.xml
+                       --xml ${PROJECT_SOURCE_DIR}/examples/nodeset/testPLC.OPCUA.xml
+                       ${PROJECT_BINARY_DIR}/src_generated/ua_namespace_simatic
+                       DEPENDS ${UA_FILE_NS0}
+                       ${PROJECT_SOURCE_DIR}/tools/nodeset_compiler/nodeset_compiler.py
+                       ${PROJECT_SOURCE_DIR}/tools/nodeset_compiler/nodes.py
+                       ${PROJECT_SOURCE_DIR}/tools/nodeset_compiler/nodeset.py
+                       ${PROJECT_SOURCE_DIR}/tools/nodeset_compiler/datatypes.py
+                       ${PROJECT_SOURCE_DIR}/tools/nodeset_compiler/backend_open62541.py
+                       ${PROJECT_SOURCE_DIR}/tools/nodeset_compiler/backend_open62541_nodes.py
+                       ${PROJECT_SOURCE_DIR}/tools/nodeset_compiler/backend_open62541_datatypes.py
+                       ${PROJECT_SOURCE_DIR}/deps/ua-nodeset/Schema/Opc.Ua.NodeSet2.xml
+                       ${PROJECT_SOURCE_DIR}/deps/ua-nodeset/DI/Opc.Ua.Di.NodeSet2.xml
+                       ${PROJECT_SOURCE_DIR}/examples/nodeset/testPLC.OPCUA.xml
+                       )
+    add_custom_target(open62541-generator-ns-simatic DEPENDS ${PROJECT_BINARY_DIR}/src_generated/ua_namespace_simatic.c)
+    add_dependencies(open62541-generator-ns-simatic open62541-generator-ns-di open62541-generator-types-simatic)
+
+    add_example(server_nodeset_simatic server_nodeset_simatic.c
+                ${PROJECT_BINARY_DIR}/src_generated/ua_types_di_generated.c
+                ${PROJECT_BINARY_DIR}/src_generated/ua_types_simatic_generated.c
+                ${PROJECT_BINARY_DIR}/src_generated/ua_namespace_di.c
+                ${PROJECT_BINARY_DIR}/src_generated/ua_namespace_simatic.c)
+    add_dependencies(server_nodeset_simatic open62541-generator-ns-simatic)
+    target_include_directories(server_nodeset_simatic PRIVATE ${PROJECT_SOURCE_DIR}/src) # needs an internal header
+
+    if(UA_COMPILE_AS_CXX)
+        set_source_files_properties(${PROJECT_BINARY_DIR}/src_generated/ua_namespace_simatic.c PROPERTIES LANGUAGE CXX)
+    endif()
 endif()

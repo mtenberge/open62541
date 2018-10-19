@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<opc:TypeDictionary
+  xmlns:opc="http://opcfoundation.org/BinarySchema/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:ua="http://opcfoundation.org/UA/"
+  xmlns:ua_di="http://opcfoundation.org/UA/DI/"
+  xmlns:simatic="http://www.siemens.com/simatic-s7-opcua"
+  DefaultByteOrder="LittleEndian"
+  TargetNamespace="http://opcfoundation.org/UA/DI/"
+>
+  <opc:Import Namespace="http://opcfoundation.org/UA/" Location="Opc.Ua.BinarySchema.bsd"/>
+
+  <opc:EnumeratedType Name="SimaticOperatingState" LengthInBits="32">
+      <opc:EnumeratedValue Name="NotSupported" Value="0" />
+      <opc:EnumeratedValue Name="StopFwUpdate" Value="1" />
+      <opc:EnumeratedValue Name="StopSelfInitialization" Value="3" />
+      <opc:EnumeratedValue Name="Stop" Value="4" />
+      <opc:EnumeratedValue Name="Startup" Value="6" />
+      <opc:EnumeratedValue Name="Run" Value="8" />
+      <opc:EnumeratedValue Name="RunRedundant" Value="9" />
+      <opc:EnumeratedValue Name="Halt" Value="10" />
+      <opc:EnumeratedValue Name="LinkUp" Value="11" />
+      <opc:EnumeratedValue Name="Update" Value="12" />
+      <opc:EnumeratedValue Name="Defective" Value="13" />
+      <opc:EnumeratedValue Name="ErrorSearch" Value="14" />
+      <opc:EnumeratedValue Name="NoPower" Value="15" />
+      <opc:EnumeratedValue Name="CiR" Value="16" />
+      <opc:EnumeratedValue Name="STOPwithoutODIS" Value="17" />
+      <opc:EnumeratedValue Name="RunODIS" Value="18" />
+  </opc:EnumeratedType>
+
+    <opc:StructuredType BaseType="ua:ExtensionObject" Name="&quot;globalDB&quot;.&quot;UntypedStruct&quot;">
+        <opc:Field TypeName="opc:Int16" Name="structInt"/>
+    </opc:StructuredType>
+    <opc:StructuredType BaseType="ua:ExtensionObject" Name="&quot;udtDemo&quot;">
+        <opc:Field TypeName="opc:Int32" Name="myByteArray_Size"/>
+        <opc:Field TypeName="opc:Byte" Name="myByteArray" LengthField="myByteArray_Size"/>
+        <opc:Field TypeName="opc:Int16" Name="mySingleInt"/>
+        <opc:Field TypeName="tns:&quot;udtDemo2&quot;" Name="mySingleStruct"/>
+        <opc:Field TypeName="opc:Int32" Name="myStructArray_Size"/>
+        <opc:Field TypeName="tns:&quot;udtDemo2&quot;" Name="myStructArray" LengthField="myStructArray_Size"/>
+        <opc:Field TypeName="opc:String" Name="myString"/>
+    </opc:StructuredType>
+    <opc:StructuredType BaseType="ua:ExtensionObject" Name="&quot;udtDemo2&quot;">
+        <opc:Field TypeName="opc:Byte" Name="byteFirst"/>
+        <opc:Field TypeName="opc:Byte" Name="byteSecond"/>
+        <opc:Field TypeName="opc:Int16" Name="intFirst"/>
+        <opc:Field TypeName="opc:Int16" Name="intSecond"/>
+    </opc:StructuredType>
+
+    <opc:OpaqueType Name="BYTE">
+        <opc:Documentation>Simatic Byte</opc:Documentation>
+    </opc:OpaqueType>
+
+    <opc:OpaqueType Name="STRING_SIMATIC">
+        <opc:Documentation>Simatic String</opc:Documentation>
+    </opc:OpaqueType>
+
+</opc:TypeDictionary>

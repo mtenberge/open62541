@@ -26,7 +26,7 @@
         <Alias Alias="HasProperty">i=46</Alias>
         <Alias Alias="HasComponent">i=47</Alias>
         <Alias Alias="BYTE">ns=3;i=3001</Alias>
-        <Alias Alias="STRING">ns=3;i=3014</Alias>
+        <Alias Alias="STRING_SIMATIC">ns=3;i=3014</Alias>
         <Alias Alias="EnumValueType">i=7594</Alias>
     </Aliases>
     <Extensions>
@@ -735,7 +735,7 @@
 <UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myStructArray&quot;" BrowseName="3:myStructArray" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;" DataType="ns=3;s=DT_&quot;udtDemo2&quot;" AccessLevel="3" ValueRank="1" ArrayDimensions="2">
     <DisplayName>myStructArray</DisplayName>
     <References>
-        <Reference ReferenceType="HasTypeDefinition">i=62</Reference>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
         <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"</Reference>
     </References>
 </UAVariable>
@@ -809,14 +809,14 @@
         <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"."myStructArray"[1]</Reference>
     </References>
 </UAVariable>
-<UADataType NodeId="ns=3;i=3014" BrowseName="3:STRING">
-    <DisplayName>STRING</DisplayName>
+<UADataType NodeId="ns=3;i=3014" BrowseName="3:STRING_SIMATIC">
+    <DisplayName>STRING_SIMATIC</DisplayName>
     <Description>STRING data type saves several characters in a character string that can consist of up to 254 characters. In a character string all characters of the ASCII code are permitted.</Description>
     <References>
         <Reference ReferenceType="HasSubtype" IsForward="false">i=12</Reference>
     </References>
 </UADataType>
-<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myString&quot;" BrowseName="3:myString" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;" DataType="STRING" AccessLevel="3">
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myString&quot;" BrowseName="3:myString" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;" DataType="STRING_SIMATIC" AccessLevel="3">
     <DisplayName>myString</DisplayName>
     <References>
         <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
@@ -826,7 +826,7 @@
 <UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;" BrowseName="3:arrayOfUdts" ParentNodeId="ns=3;s=&quot;globalDB&quot;" DataType="ns=3;s=DT_&quot;udtDemo&quot;" AccessLevel="3" ValueRank="1" ArrayDimensions="2">
     <DisplayName>arrayOfUdts</DisplayName>
     <References>
-        <Reference ReferenceType="HasTypeDefinition">i=62</Reference>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
         <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"</Reference>
     </References>
 </UAVariable>
@@ -903,7 +903,7 @@
 <UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myStructArray&quot;" BrowseName="3:myStructArray" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0]" DataType="ns=3;s=DT_&quot;udtDemo2&quot;" AccessLevel="3" ValueRank="1" ArrayDimensions="2">
     <DisplayName>myStructArray</DisplayName>
     <References>
-        <Reference ReferenceType="HasTypeDefinition">i=62</Reference>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
         <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]</Reference>
     </References>
 </UAVariable>
@@ -977,7 +977,7 @@
         <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]."myStructArray"[1]</Reference>
     </References>
 </UAVariable>
-<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myString&quot;" BrowseName="3:myString" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0]" DataType="STRING" AccessLevel="3">
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myString&quot;" BrowseName="3:myString" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0]" DataType="STRING_SIMATIC" AccessLevel="3">
     <DisplayName>myString</DisplayName>
     <References>
         <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
@@ -1057,7 +1057,7 @@
 <UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myStructArray&quot;" BrowseName="3:myStructArray" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1]" DataType="ns=3;s=DT_&quot;udtDemo2&quot;" AccessLevel="3" ValueRank="1" ArrayDimensions="2">
     <DisplayName>myStructArray</DisplayName>
     <References>
-        <Reference ReferenceType="HasTypeDefinition">i=62</Reference>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
         <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]</Reference>
     </References>
 </UAVariable>
@@ -1131,7 +1131,7 @@
         <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]."myStructArray"[1]</Reference>
     </References>
 </UAVariable>
-<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myString&quot;" BrowseName="3:myString" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1]" DataType="STRING" AccessLevel="3">
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myString&quot;" BrowseName="3:myString" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1]" DataType="STRING_SIMATIC" AccessLevel="3">
     <DisplayName>myString</DisplayName>
     <References>
         <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
@@ -1148,7 +1148,7 @@
         <Field DataType="BYTE" Name="myByteArray" ValueRank="1" />
         <Field DataType="ns=3;s=DT_&quot;udtDemo2&quot;" Name="mySingleStruct" />
         <Field DataType="ns=3;s=DT_&quot;udtDemo2&quot;" Name="myStructArray" ValueRank="1" />
-        <Field DataType="STRING" Name="myString" />
+        <Field DataType="STRING_SIMATIC" Name="myString" />
     </Definition>
 </UADataType>
 <UAVariableType NodeId="ns=3;s=VT_&quot;udtDemo&quot;" BrowseName="3:udtDemo" DataType="ns=3;s=DT_&quot;udtDemo&quot;">
@@ -1181,11 +1181,11 @@
 <UAVariable NodeId="ns=3;s=V_&quot;udtDemo&quot;.&quot;myStructArray&quot;" BrowseName="3:myStructArray" ParentNodeId="ns=3;s=VT_&quot;udtDemo&quot;" DataType="ns=3;s=DT_&quot;udtDemo2&quot;" ValueRank="1" ArrayDimensions="2">
     <DisplayName>myStructArray</DisplayName>
     <References>
-        <Reference ReferenceType="HasTypeDefinition">i=62</Reference>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
         <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=VT_"udtDemo"</Reference>
     </References>
 </UAVariable>
-<UAVariable NodeId="ns=3;s=V_&quot;udtDemo&quot;.&quot;myString&quot;" BrowseName="3:myString" ParentNodeId="ns=3;s=VT_&quot;udtDemo&quot;" DataType="STRING">
+<UAVariable NodeId="ns=3;s=V_&quot;udtDemo&quot;.&quot;myString&quot;" BrowseName="3:myString" ParentNodeId="ns=3;s=VT_&quot;udtDemo&quot;" DataType="STRING_SIMATIC">
     <DisplayName>myString</DisplayName>
     <References>
         <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
