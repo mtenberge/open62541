@@ -123,6 +123,81 @@ opaque_type_mapping = {
         'ns': 0,
         'id': 13,
         'name': 'DateTime'
+    },
+    'BYTE': {
+        'ns': 0,
+        'id': 3,
+        'name': 'Byte'
+    },
+    'WORD': {
+        'ns': 0,
+        'id': 5,
+        'name': 'UInt16'
+    },
+    'DWORD': {
+        'ns': 0,
+        'id': 7,
+        'name': 'UInt32'
+    },
+    'TIME': {
+        'ns': 0,
+        'id': 6,
+        'name': 'Int32'
+    },
+    'TOD': {
+        'ns': 0,
+        'id': 7,
+        'name': 'UInt32'
+    },
+    'DT': {
+        'ns': 0,
+        'id': 3,
+        'name': 'Byte'
+    },
+    'STRING_SIMATIC': {
+        'ns': 0,
+        'id': 12,
+        'name': 'String'
+    },
+    'HW_ANY': {
+        'ns': 0,
+        'id': 5,
+        'name': 'UInt16'
+    },
+    'CONN_ANY': {
+        'ns': 0,
+        'id': 5,
+        'name': 'UInt16'
+    },
+    'HW_IO': {
+        'ns': 0,
+        'id': 5,
+        'name': 'UInt16'
+    },
+    'HW_IOSYSTEM': {
+        'ns': 0,
+        'id': 5,
+        'name': 'UInt16'
+    },
+    'HW_SUBMODULE': {
+        'ns': 0,
+        'id': 5,
+        'name': 'UInt16'
+    },
+    'HW_MODULE': {
+        'ns': 0,
+        'id': 5,
+        'name': 'UInt16'
+    },
+    'CONN_OUC': {
+        'ns': 0,
+        'id': 3,
+        'name': 'Byte'
+    },
+    'ANY': {
+        'ns': 0,
+        'id': 3,
+        'name': 'Byte'
     }
 }
 
