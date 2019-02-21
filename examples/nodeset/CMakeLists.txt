@@ -66,11 +66,13 @@ if(NOT CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     set(FILE_CSV_DIRPREFIX ${CMAKE_SOURCE_DIR}/deps/ua-nodeset)
     set(FILE_BSD_PLCOPEN_DIRPREFIX ${CMAKE_SOURCE_DIR}/deps/ua-nodeset)
     set(FILE_BSD_POWERLINK_DIRPREFIX ${PROJECT_SOURCE_DIR}/nodeset)
+    set(FILE_BSD_SIMATIC_DIRPREFIX ${PROJECT_SOURCE_DIR}/nodeset)
     set(FILE_NS_DIRPREFIX ${CMAKE_SOURCE_DIR}/deps/ua-nodeset)
 else()
     set(FILE_CSV_DIRPREFIX ${UA_NODESET_DIR})
     set(FILE_BSD_PLCOPEN_DIRPREFIX ${UA_NODESET_DIR})
     set(FILE_BSD_POWERLINK_DIRPREFIX ${PROJECT_SOURCE_DIR}/nodeset)
+    set(FILE_BSD_SIMATIC_DIRPREFIX ${PROJECT_SOURCE_DIR}/nodeset)
     set(FILE_NS_DIRPREFIX ${UA_NODESET_DIR})
 endif()
 
@@ -103,7 +105,7 @@ if(UA_NAMESPACE_ZERO STREQUAL "FULL")
                 ${UA_TYPES_DI_SOURCES}
                 ${UA_TYPES_PLC_SOURCES})
     add_dependencies(server_nodeset_plcopen open62541-generator-ns-plc)
-    
+
 
 endif()
 
@@ -129,6 +131,84 @@ if(UA_NAMESPACE_ZERO STREQUAL "FULL")
                 ${UA_TYPES_DI_SOURCES}
                 ${UA_TYPES_POWERLINK_SOURCES})
     add_dependencies(server_nodeset_powerlink open62541-generator-ns-powerlink)
-    
+
+
+endif()
+
+
+# SIMATIC requires the full ns0 as basis
+if(UA_NAMESPACE_ZERO STREQUAL "FULL")
+  # Generate types for simatic namespace
+
+  # Generate types and namespace for DI
+  #ua_generate_nodeset_and_datatypes(
+  #    NAME "di"
+  #    FILE_CSV "${PROJECT_SOURCE_DIR}/deps/ua-nodeset/DI/OpcUaDiModel.csv"
+  #    FILE_BSD "${PROJECT_SOURCE_DIR}/deps/ua-nodeset/DI/Opc.Ua.Di.Types.bsd"
+  #    NAMESPACE_IDX 2
+  #    FILE_NS "${PROJECT_SOURCE_DIR}/deps/ua-nodeset/DI/Opc.Ua.Di.NodeSet2.xml"
+  #    INTERNAL
+  #)
+
+  # prepare/fix the original unmodified Siemens OPC-UA XML file (see fix_opc_xml.sh):
+  add_custom_command(
+    OUTPUT
+    ${CMAKE_CURRENT_BINARY_DIR}/testPLC.OPCUA.xml
+    COMMAND cp ${CMAKE_CURRENT_SOURCE_DIR}/testPLC.OPCUA.xml ${CMAKE_CURRENT_BINARY_DIR}/testPLC.OPCUA.xml
+    COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/fix_opc_xml.sh ${CMAKE_CURRENT_BINARY_DIR}/testPLC.OPCUA.xml
+    DEPENDS
+    ${CMAKE_CURRENT_SOURCE_DIR}/testPLC.OPCUA.xml
+    ${CMAKE_CURRENT_SOURCE_DIR}/fix_opc_xml.sh
+  )
+  add_custom_target(prepare-xml-simatic DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/testPLC.OPCUA.xml)
+
+  # extract the TypeDictionary for namespace 3 from the XML file:
+  add_subdirectory(${CMAKE_SOURCE_DIR}/tools/extract_typedictionary ${CMAKE_CURRENT_BINARY_DIR}/extract_typedictionary)
+  add_custom_command(
+    OUTPUT
+    ${CMAKE_CURRENT_BINARY_DIR}/simatic.types.bsd
+    COMMAND ${CMAKE_CURRENT_BINARY_DIR}/extract_typedictionary/extract_typedictionary
+      ${CMAKE_CURRENT_BINARY_DIR}/testPLC.OPCUA.xml
+      "ns=3;i=6001"
+      ${CMAKE_CURRENT_BINARY_DIR}/simatic.types.bsd
+    DEPENDS
+    prepare-xml-simatic
+    typedictionary-extractor
+    VERBATIM
+  )
+  add_custom_target(create-bsd-simatic DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/simatic.types.bsd)
+
+  # generate the csv-file:
+  add_subdirectory(${CMAKE_SOURCE_DIR}/tools/extract_typedefs ${CMAKE_CURRENT_BINARY_DIR}/extract_typedefs)
+  add_custom_command(
+    OUTPUT
+    ${CMAKE_CURRENT_BINARY_DIR}/OpcUaSimaticModel.csv
+    COMMAND ${CMAKE_CURRENT_BINARY_DIR}/extract_typedefs/extract_typedefs
+      ${CMAKE_CURRENT_BINARY_DIR}/testPLC.OPCUA.xml
+      ${CMAKE_CURRENT_BINARY_DIR}/OpcUaSimaticModel.csv
+    DEPENDS
+      prepare-xml-simatic
+      typedef-extractor
+  )
+  add_custom_target(create-csv-simatic DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/OpcUaSimaticModel.csv)
+
+  ua_generate_nodeset_and_datatypes(
+    NAME "simatic"
+    FILE_BSD "${CMAKE_CURRENT_BINARY_DIR}/simatic.types.bsd"
+    FILE_CSV "${CMAKE_CURRENT_BINARY_DIR}/OpcUaSimaticModel.csv"
+    NAMESPACE_IDX 3
+    INTERNAL
+    FILE_NS "${CMAKE_CURRENT_BINARY_DIR}/testPLC.OPCUA.xml"
+    DEPENDS "di"
+  )
+  add_dependencies(open62541-generator-ns-simatic create-bsd-simatic create-csv-simatic prepare-xml-simatic)
+
+  add_example(server_nodeset_simatic server_nodeset_simatic.c
+    ${UA_NODESET_DI_SOURCES}
+    ${UA_NODESET_SIMATIC_SOURCES}
+    ${UA_TYPES_DI_SOURCES}
+    ${UA_TYPES_SIMATIC_SOURCES}
+  )
+  add_dependencies(server_nodeset_simatic open62541-generator-ns-simatic)
 
 endif()

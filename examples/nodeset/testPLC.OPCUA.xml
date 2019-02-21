@@ -1,0 +1,1318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UANodeSet LastModified="2018-10-18T12:17:23Z" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd">
+    <NamespaceUris>
+        <Uri>urn:SIMATIC.S7-1500.OPC-UAServer:testPLC</Uri>
+        <Uri>http://opcfoundation.org/UA/DI/</Uri>
+        <Uri>http://www.siemens.com/simatic-s7-opcua</Uri>
+    </NamespaceUris>
+    <Aliases>
+        <Alias Alias="Boolean">i=1</Alias>
+        <Alias Alias="BOOL">i=1</Alias>
+        <Alias Alias="Byte">i=3</Alias>
+        <Alias Alias="Int16">i=4</Alias>
+        <Alias Alias="INT">i=4</Alias>
+        <Alias Alias="Int32">i=6</Alias>
+        <Alias Alias="String">i=12</Alias>
+        <Alias Alias="ByteString">i=15</Alias>
+        <Alias Alias="LocalizedText">i=21</Alias>
+        <Alias Alias="Structure">i=22</Alias>
+        <Alias Alias="Enumeration">i=29</Alias>
+        <Alias Alias="Organizes">i=35</Alias>
+        <Alias Alias="HasModellingRule">i=37</Alias>
+        <Alias Alias="HasEncoding">i=38</Alias>
+        <Alias Alias="HasDescription">i=39</Alias>
+        <Alias Alias="HasTypeDefinition">i=40</Alias>
+        <Alias Alias="HasSubtype">i=45</Alias>
+        <Alias Alias="HasProperty">i=46</Alias>
+        <Alias Alias="HasComponent">i=47</Alias>
+        <Alias Alias="BYTE">ns=3;i=3001</Alias>
+        <Alias Alias="STRING">ns=3;i=3014</Alias>
+        <Alias Alias="EnumValueType">i=7594</Alias>
+    </Aliases>
+    <Extensions>
+        <Extension>
+            <Generator Product="TIA Portal" Edition="STEP 7 Professional" Version="15.0" />
+        </Extension>
+    </Extensions>
+<UAObject NodeId="ns=3;i=5063" BrowseName="3:DataBlocksGlobal" ParentNodeId="ns=3;i=1002">
+    <DisplayName>DataBlocksGlobal</DisplayName>
+    <Description>Holding all global available datablocks.</Description>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">ns=2;i=1005</Reference>
+        <Reference ReferenceType="HasModellingRule">i=80</Reference>
+    </References>
+</UAObject>
+<UAObject NodeId="ns=3;i=5064" BrowseName="3:DataBlocksInstance" ParentNodeId="ns=3;i=1002">
+    <DisplayName>DataBlocksInstance</DisplayName>
+    <Description>Holding all instance datablocks.</Description>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">ns=2;i=1005</Reference>
+        <Reference ReferenceType="HasModellingRule">i=80</Reference>
+    </References>
+</UAObject>
+<UAObject NodeId="ns=3;i=5062" BrowseName="3:Counters" ParentNodeId="ns=3;i=1002">
+    <DisplayName>Counters</DisplayName>
+    <Description>Holding all counters.</Description>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">ns=2;i=1005</Reference>
+        <Reference ReferenceType="HasModellingRule">i=80</Reference>
+    </References>
+</UAObject>
+<UAObject NodeId="ns=3;i=5061" BrowseName="3:Timers" ParentNodeId="ns=3;i=1002">
+    <DisplayName>Timers</DisplayName>
+    <Description>Holding all global timers.</Description>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">ns=2;i=1005</Reference>
+        <Reference ReferenceType="HasModellingRule">i=80</Reference>
+    </References>
+</UAObject>
+<UAObject NodeId="ns=3;i=5059" BrowseName="3:Inputs" ParentNodeId="ns=3;i=1002">
+    <DisplayName>Inputs</DisplayName>
+    <Description>Holding all global inputs.</Description>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">ns=2;i=1005</Reference>
+        <Reference ReferenceType="HasModellingRule">i=80</Reference>
+    </References>
+</UAObject>
+<UAObject NodeId="ns=3;i=5060" BrowseName="3:Outputs" ParentNodeId="ns=3;i=1002">
+    <DisplayName>Outputs</DisplayName>
+    <Description>Holding all global outputs.</Description>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">ns=2;i=1005</Reference>
+        <Reference ReferenceType="HasModellingRule">i=80</Reference>
+    </References>
+</UAObject>
+<UAObject NodeId="ns=3;i=5065" BrowseName="3:Memory" ParentNodeId="ns=3;i=1002">
+    <DisplayName>Memory</DisplayName>
+    <Description>Holding all global memory (bit, byte, words, ...).</Description>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">ns=2;i=1005</Reference>
+        <Reference ReferenceType="HasModellingRule">i=80</Reference>
+    </References>
+</UAObject>
+<UAVariable NodeId="ns=3;i=6070" BrowseName="3:EngineeringRevision" ParentNodeId="ns=3;i=1002" DataType="String">
+    <DisplayName>EngineeringRevision</DisplayName>
+    <Description>Revision Level of the engineering environment.</Description>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;i=6083" BrowseName="EnumValues" ParentNodeId="ns=3;i=3063" DataType="EnumValueType" ValueRank="1" ArrayDimensions="16">
+    <DisplayName>EnumValues</DisplayName>
+    <Description>The human readable strings associated with the values of an enumerated value (when values have no sequence).</Description>
+    <References>
+        <Reference ReferenceType="HasProperty" IsForward="false">ns=3;i=3063</Reference>
+        <Reference ReferenceType="HasModellingRule">i=78</Reference>
+        <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Value>
+        <uax:ListOfExtensionObject xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd">
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=7616</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EnumValueType>
+                        <uax:Value>0</uax:Value>
+                        <uax:DisplayName>
+                            <uax:Text>NotSupported</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description />
+                    </uax:EnumValueType>
+                </uax:Body>
+            </uax:ExtensionObject>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=7616</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EnumValueType>
+                        <uax:Value>1</uax:Value>
+                        <uax:DisplayName>
+                            <uax:Text>StopFwUpdate</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description />
+                    </uax:EnumValueType>
+                </uax:Body>
+            </uax:ExtensionObject>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=7616</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EnumValueType>
+                        <uax:Value>3</uax:Value>
+                        <uax:DisplayName>
+                            <uax:Text>StopSelfInitialization</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description />
+                    </uax:EnumValueType>
+                </uax:Body>
+            </uax:ExtensionObject>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=7616</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EnumValueType>
+                        <uax:Value>4</uax:Value>
+                        <uax:DisplayName>
+                            <uax:Text>Stop</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description />
+                    </uax:EnumValueType>
+                </uax:Body>
+            </uax:ExtensionObject>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=7616</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EnumValueType>
+                        <uax:Value>6</uax:Value>
+                        <uax:DisplayName>
+                            <uax:Text>Startup</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description />
+                    </uax:EnumValueType>
+                </uax:Body>
+            </uax:ExtensionObject>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=7616</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EnumValueType>
+                        <uax:Value>8</uax:Value>
+                        <uax:DisplayName>
+                            <uax:Text>Run</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description />
+                    </uax:EnumValueType>
+                </uax:Body>
+            </uax:ExtensionObject>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=7616</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EnumValueType>
+                        <uax:Value>9</uax:Value>
+                        <uax:DisplayName>
+                            <uax:Text>RunRedundant</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description />
+                    </uax:EnumValueType>
+                </uax:Body>
+            </uax:ExtensionObject>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=7616</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EnumValueType>
+                        <uax:Value>10</uax:Value>
+                        <uax:DisplayName>
+                            <uax:Text>Halt</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description />
+                    </uax:EnumValueType>
+                </uax:Body>
+            </uax:ExtensionObject>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=7616</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EnumValueType>
+                        <uax:Value>11</uax:Value>
+                        <uax:DisplayName>
+                            <uax:Text>LinkUp</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description />
+                    </uax:EnumValueType>
+                </uax:Body>
+            </uax:ExtensionObject>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=7616</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EnumValueType>
+                        <uax:Value>12</uax:Value>
+                        <uax:DisplayName>
+                            <uax:Text>Update</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description />
+                    </uax:EnumValueType>
+                </uax:Body>
+            </uax:ExtensionObject>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=7616</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EnumValueType>
+                        <uax:Value>13</uax:Value>
+                        <uax:DisplayName>
+                            <uax:Text>Defective</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description />
+                    </uax:EnumValueType>
+                </uax:Body>
+            </uax:ExtensionObject>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=7616</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EnumValueType>
+                        <uax:Value>14</uax:Value>
+                        <uax:DisplayName>
+                            <uax:Text>ErrorSearch</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description />
+                    </uax:EnumValueType>
+                </uax:Body>
+            </uax:ExtensionObject>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=7616</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EnumValueType>
+                        <uax:Value>15</uax:Value>
+                        <uax:DisplayName>
+                            <uax:Text>NoPower</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description />
+                    </uax:EnumValueType>
+                </uax:Body>
+            </uax:ExtensionObject>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=7616</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EnumValueType>
+                        <uax:Value>16</uax:Value>
+                        <uax:DisplayName>
+                            <uax:Text>CiR</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description />
+                    </uax:EnumValueType>
+                </uax:Body>
+            </uax:ExtensionObject>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=7616</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EnumValueType>
+                        <uax:Value>17</uax:Value>
+                        <uax:DisplayName>
+                            <uax:Text>STOPwithoutODIS</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description />
+                    </uax:EnumValueType>
+                </uax:Body>
+            </uax:ExtensionObject>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=7616</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EnumValueType>
+                        <uax:Value>18</uax:Value>
+                        <uax:DisplayName>
+                            <uax:Text>RunODIS</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description />
+                    </uax:EnumValueType>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </uax:ListOfExtensionObject>
+    </Value>
+</UAVariable>
+<UADataType NodeId="ns=3;i=3063" BrowseName="3:SimaticOperatingState">
+    <DisplayName>SimaticOperatingState</DisplayName>
+    <References>
+        <Reference ReferenceType="HasProperty">ns=3;i=6083</Reference>
+        <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+    </References>
+    <Definition Name="3:SimaticOperatingState">
+        <Field Name="NotSupported" Value="0" />
+        <Field Name="StopFwUpdate" Value="1" />
+        <Field Name="StopSelfInitialization" Value="3" />
+        <Field Name="Stop" Value="4" />
+        <Field Name="Startup" Value="6" />
+        <Field Name="Run" Value="8" />
+        <Field Name="RunRedundant" Value="9" />
+        <Field Name="Halt" Value="10" />
+        <Field Name="LinkUp" Value="11" />
+        <Field Name="Update" Value="12" />
+        <Field Name="Defective" Value="13" />
+        <Field Name="ErrorSearch" Value="14" />
+        <Field Name="NoPower" Value="15" />
+        <Field Name="CiR" Value="16" />
+        <Field Name="STOPwithoutODIS" Value="17" />
+        <Field Name="RunODIS" Value="18" />
+    </Definition>
+</UADataType>
+<UAVariable NodeId="ns=3;i=6071" BrowseName="3:OperatingMode" ParentNodeId="ns=3;i=1002" DataType="ns=3;i=3063">
+    <DisplayName>OperatingMode</DisplayName>
+    <Description>Shows the current operating state of your PLC.</Description>
+    <References>
+        <Reference ReferenceType="HasProperty" IsForward="false">ns=3;i=1002</Reference>
+        <Reference ReferenceType="HasModellingRule">i=78</Reference>
+        <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;i=6072" BrowseName="3:OrderNumber" ParentNodeId="ns=3;i=1002" DataType="String">
+    <DisplayName>OrderNumber</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+</UAVariable>
+<UAObjectType NodeId="ns=3;i=1002" BrowseName="3:SimaticDeviceType">
+    <DisplayName>SimaticDeviceType</DisplayName>
+    <Description>This type represents one simatic opcua device.</Description>
+    <References>
+        <Reference ReferenceType="HasSubtype" IsForward="false">ns=2;i=1002</Reference>
+        <Reference ReferenceType="HasComponent">ns=3;i=5063</Reference>
+        <Reference ReferenceType="HasComponent">ns=3;i=5064</Reference>
+        <Reference ReferenceType="HasComponent">ns=3;i=5062</Reference>
+        <Reference ReferenceType="HasComponent">ns=3;i=5061</Reference>
+        <Reference ReferenceType="HasComponent">ns=3;i=5059</Reference>
+        <Reference ReferenceType="HasComponent">ns=3;i=5060</Reference>
+        <Reference ReferenceType="HasComponent">ns=3;i=5065</Reference>
+        <Reference ReferenceType="HasProperty">ns=3;i=6070</Reference>
+        <Reference ReferenceType="HasProperty">ns=3;i=6071</Reference>
+        <Reference ReferenceType="HasProperty">ns=3;i=6072</Reference>
+    </References>
+</UAObjectType>
+<UAVariable NodeId="ns=3;s=DeviceManual" BrowseName="2:DeviceManual" ParentNodeId="ns=3;s=PLC" DataType="String">
+    <DisplayName>DeviceManual</DisplayName>
+    <Description>Address (pathname in the file system or a URL | Web address) of user manual for the device</Description>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=DeviceRevision" BrowseName="2:DeviceRevision" ParentNodeId="ns=3;s=PLC" DataType="String">
+    <DisplayName>DeviceRevision</DisplayName>
+    <Description>Overall revision level of the device.</Description>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=EngineeringRevision" BrowseName="3:EngineeringRevision" ParentNodeId="ns=3;s=PLC" DataType="String">
+    <DisplayName>EngineeringRevision</DisplayName>
+    <Description>Revision Level of the engineering environment.</Description>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=HardwareRevision" BrowseName="2:HardwareRevision" ParentNodeId="ns=3;s=PLC" DataType="String">
+    <DisplayName>HardwareRevision</DisplayName>
+    <Description>Revision level of the hardware of the device</Description>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=Manufacturer" BrowseName="2:Manufacturer" ParentNodeId="ns=3;s=PLC" DataType="LocalizedText">
+    <DisplayName>Manufacturer</DisplayName>
+    <Description>Model name of the device</Description>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=Model" BrowseName="2:Model" ParentNodeId="ns=3;s=PLC" DataType="LocalizedText">
+    <DisplayName>Model</DisplayName>
+    <Description>Name of the company that manufactured the device.</Description>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=OperatingMode" BrowseName="3:OperatingMode" ParentNodeId="ns=3;s=PLC" DataType="ns=3;i=3063">
+    <DisplayName>OperatingMode</DisplayName>
+    <Description>Shows the current state of your PLC.</Description>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=OrderNumber" BrowseName="3:OrderNumber" ParentNodeId="ns=3;s=PLC" DataType="String">
+    <DisplayName>OrderNumber</DisplayName>
+    <Description>Order number of your device (MFLB)</Description>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=RevisionCounter" BrowseName="2:RevisionCounter" ParentNodeId="ns=3;s=PLC" DataType="Int32">
+    <DisplayName>RevisionCounter</DisplayName>
+    <Description>An incremental counter indicating the number of times the static data within the Device has been modified.</Description>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=SerialNumber" BrowseName="2:SerialNumber" ParentNodeId="ns=3;s=PLC" DataType="String">
+    <DisplayName>SerialNumber</DisplayName>
+    <Description>Identifier that uniquely identifies, within a manufacturer, a device instance.</Description>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=SoftwareRevision" BrowseName="2:SoftwareRevision" ParentNodeId="ns=3;s=PLC" DataType="String">
+    <DisplayName>SoftwareRevision</DisplayName>
+    <Description>Revision level of the software/firmware of the device</Description>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+</UAVariable>
+<UAObject NodeId="ns=3;s=PLC" BrowseName="3:testPLC" ParentNodeId="ns=2;i=5001">
+    <DisplayName>testPLC</DisplayName>
+    <Description>The PLC instance which supports you with OPC UA functionality.</Description>
+    <References>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=2;i=5001</Reference>
+        <Reference ReferenceType="Organizes" IsForward="false">i=85</Reference>
+        <Reference ReferenceType="HasTypeDefinition">ns=3;i=1002</Reference>
+        <Reference ReferenceType="HasProperty">ns=3;s=DeviceManual</Reference>
+        <Reference ReferenceType="HasProperty">ns=3;s=DeviceRevision</Reference>
+        <Reference ReferenceType="HasProperty">ns=3;s=EngineeringRevision</Reference>
+        <Reference ReferenceType="HasProperty">ns=3;s=HardwareRevision</Reference>
+        <Reference ReferenceType="HasProperty">ns=3;s=Manufacturer</Reference>
+        <Reference ReferenceType="HasProperty">ns=3;s=Model</Reference>
+        <Reference ReferenceType="HasProperty">ns=3;s=OperatingMode</Reference>
+        <Reference ReferenceType="HasProperty">ns=3;s=OrderNumber</Reference>
+        <Reference ReferenceType="HasProperty">ns=3;s=RevisionCounter</Reference>
+        <Reference ReferenceType="HasProperty">ns=3;s=SerialNumber</Reference>
+        <Reference ReferenceType="HasProperty">ns=3;s=SoftwareRevision</Reference>
+    </References>
+</UAObject>
+<UAObject NodeId="ns=3;s=Memory" BrowseName="3:Memory" ParentNodeId="ns=3;s=PLC">
+    <DisplayName>Memory</DisplayName>
+    <Description>Holding all global memory (bit, byte, words, ...).</Description>
+    <References>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=PLC</Reference>
+        <Reference ReferenceType="HasTypeDefinition">ns=2;i=1005</Reference>
+    </References>
+</UAObject>
+<UAVariable NodeId="ns=3;s=&quot;Clock_0.5Hz&quot;" BrowseName="3:Clock_0.5Hz" ParentNodeId="ns=3;s=Memory" DataType="BOOL" AccessLevel="3">
+    <DisplayName>Clock_0.5Hz</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=Memory</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;Clock_0.625Hz&quot;" BrowseName="3:Clock_0.625Hz" ParentNodeId="ns=3;s=Memory" DataType="BOOL" AccessLevel="3">
+    <DisplayName>Clock_0.625Hz</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=Memory</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;Clock_1.25Hz&quot;" BrowseName="3:Clock_1.25Hz" ParentNodeId="ns=3;s=Memory" DataType="BOOL" AccessLevel="3">
+    <DisplayName>Clock_1.25Hz</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=Memory</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;Clock_2.5Hz&quot;" BrowseName="3:Clock_2.5Hz" ParentNodeId="ns=3;s=Memory" DataType="BOOL" AccessLevel="3">
+    <DisplayName>Clock_2.5Hz</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=Memory</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;Clock_10Hz&quot;" BrowseName="3:Clock_10Hz" ParentNodeId="ns=3;s=Memory" DataType="BOOL" AccessLevel="3">
+    <DisplayName>Clock_10Hz</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=Memory</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;Clock_1Hz&quot;" BrowseName="3:Clock_1Hz" ParentNodeId="ns=3;s=Memory" DataType="BOOL" AccessLevel="3">
+    <DisplayName>Clock_1Hz</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=Memory</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;Clock_2Hz&quot;" BrowseName="3:Clock_2Hz" ParentNodeId="ns=3;s=Memory" DataType="BOOL" AccessLevel="3">
+    <DisplayName>Clock_2Hz</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=Memory</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;Clock_5Hz&quot;" BrowseName="3:Clock_5Hz" ParentNodeId="ns=3;s=Memory" DataType="BOOL" AccessLevel="3">
+    <DisplayName>Clock_5Hz</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=Memory</Reference>
+    </References>
+</UAVariable>
+<UADataType NodeId="ns=3;i=3001" BrowseName="3:BYTE">
+    <DisplayName>BYTE</DisplayName>
+    <Description>BYTE is a bit string of 8 bits B#16#0 to B#16#FF.</Description>
+    <References>
+        <Reference ReferenceType="HasSubtype" IsForward="false">i=3</Reference>
+    </References>
+</UADataType>
+<UAVariable NodeId="ns=3;s=&quot;Clock_Byte&quot;" BrowseName="3:Clock_Byte" ParentNodeId="ns=3;s=Memory" DataType="BYTE" AccessLevel="3">
+    <DisplayName>Clock_Byte</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=Memory</Reference>
+    </References>
+</UAVariable>
+<UAObject NodeId="ns=3;s=DataBlocksGlobal" BrowseName="3:DataBlocksGlobal" ParentNodeId="ns=3;s=PLC">
+    <DisplayName>DataBlocksGlobal</DisplayName>
+    <Description>Holding all global available datablocks.</Description>
+    <References>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=PLC</Reference>
+        <Reference ReferenceType="HasTypeDefinition">ns=2;i=1005</Reference>
+    </References>
+</UAObject>
+<UAObject NodeId="ns=3;s=&quot;globalDB&quot;" BrowseName="3:globalDB" ParentNodeId="ns=3;s=DataBlocksGlobal">
+    <DisplayName>globalDB</DisplayName>
+    <References>
+        <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=DataBlocksGlobal</Reference>
+        <Reference ReferenceType="HasTypeDefinition">i=58</Reference>
+    </References>
+</UAObject>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;singleInt&quot;" BrowseName="3:singleInt" ParentNodeId="ns=3;s=&quot;globalDB&quot;" DataType="INT" AccessLevel="3">
+    <DisplayName>singleInt</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfBools&quot;" BrowseName="3:arrayOfBools" ParentNodeId="ns=3;s=&quot;globalDB&quot;" DataType="BOOL" AccessLevel="3" ValueRank="1" ArrayDimensions="2">
+    <DisplayName>arrayOfBools</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfBools&quot;[0]" BrowseName="3:0" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfBools&quot;" DataType="BOOL" AccessLevel="3">
+    <DisplayName>0</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfBools"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfBools&quot;[1]" BrowseName="3:1" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfBools&quot;" DataType="BOOL" AccessLevel="3">
+    <DisplayName>1</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfBools"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;UntypedStruct&quot;" BrowseName="3:UntypedStruct" ParentNodeId="ns=3;s=&quot;globalDB&quot;" DataType="ns=3;s=DT_&quot;globalDB&quot;.&quot;UntypedStruct&quot;" AccessLevel="3">
+    <DisplayName>UntypedStruct</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">ns=3;s=VT_"globalDB"."UntypedStruct"</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;UntypedStruct&quot;.&quot;structInt&quot;" BrowseName="3:structInt" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;UntypedStruct&quot;" DataType="INT" AccessLevel="3">
+    <DisplayName>structInt</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."UntypedStruct"</Reference>
+    </References>
+</UAVariable>
+<UADataType NodeId="ns=3;i=3400" BrowseName="3:SimaticStructures" IsAbstract="true">
+    <DisplayName>SimaticStructures</DisplayName>
+    <Description>User program defined types (during the declaration of the PLC structured data type).</Description>
+    <References>
+        <Reference ReferenceType="HasSubtype" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="3:SimaticStructures" />
+</UADataType>
+<UAVariableType NodeId="ns=3;i=2400" BrowseName="3:SimaticStructuresType" IsAbstract="true" DataType="ns=3;i=3400">
+    <DisplayName>SimaticStructuresType</DisplayName>
+    <References>
+        <Reference ReferenceType="HasSubtype" IsForward="false">i=63</Reference>
+    </References>
+</UAVariableType>
+<UADataType NodeId="ns=3;s=DT_&quot;globalDB&quot;.&quot;UntypedStruct&quot;" BrowseName="3:&quot;globalDB&quot;.&quot;UntypedStruct&quot;">
+    <DisplayName>"globalDB"."UntypedStruct"</DisplayName>
+    <References>
+        <Reference ReferenceType="HasSubtype" IsForward="false">ns=3;i=3400</Reference>
+    </References>
+    <Definition Name="3:&quot;globalDB&quot;.&quot;UntypedStruct&quot;">
+        <Field DataType="INT" Name="structInt" />
+    </Definition>
+</UADataType>
+<UAVariableType NodeId="ns=3;s=VT_&quot;globalDB&quot;.&quot;UntypedStruct&quot;" BrowseName="3:&quot;globalDB&quot;.&quot;UntypedStruct&quot;" DataType="ns=3;s=DT_&quot;globalDB&quot;.&quot;UntypedStruct&quot;">
+    <DisplayName>"globalDB"."UntypedStruct"</DisplayName>
+    <References>
+        <Reference ReferenceType="HasSubtype" IsForward="false">ns=3;i=2400</Reference>
+    </References>
+</UAVariableType>
+<UAVariable NodeId="ns=3;s=V_&quot;globalDB&quot;.&quot;UntypedStruct&quot;.&quot;structInt&quot;" BrowseName="3:structInt" ParentNodeId="ns=3;s=VT_&quot;globalDB&quot;.&quot;UntypedStruct&quot;" DataType="INT">
+    <DisplayName>structInt</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=VT_"globalDB"."UntypedStruct"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;" BrowseName="3:instanceOfUdt" ParentNodeId="ns=3;s=&quot;globalDB&quot;" DataType="ns=3;s=DT_&quot;udtDemo&quot;" AccessLevel="3">
+    <DisplayName>instanceOfUdt</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">ns=3;s=VT_"udtDemo"</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;mySingleInt&quot;" BrowseName="3:mySingleInt" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;" DataType="INT" AccessLevel="3">
+    <DisplayName>mySingleInt</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myByteArray&quot;" BrowseName="3:myByteArray" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;" DataType="BYTE" AccessLevel="3" ValueRank="1" ArrayDimensions="2">
+    <DisplayName>myByteArray</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myByteArray&quot;[0]" BrowseName="3:0" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myByteArray&quot;" DataType="BYTE" AccessLevel="3">
+    <DisplayName>0</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"."myByteArray"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myByteArray&quot;[1]" BrowseName="3:1" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myByteArray&quot;" DataType="BYTE" AccessLevel="3">
+    <DisplayName>1</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"."myByteArray"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;mySingleStruct&quot;" BrowseName="3:mySingleStruct" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;" DataType="ns=3;s=DT_&quot;udtDemo2&quot;" AccessLevel="3">
+    <DisplayName>mySingleStruct</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">ns=3;s=VT_"udtDemo2"</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;mySingleStruct&quot;.&quot;byteFirst&quot;" BrowseName="3:byteFirst" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;mySingleStruct&quot;" DataType="BYTE" AccessLevel="3">
+    <DisplayName>byteFirst</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"."mySingleStruct"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;mySingleStruct&quot;.&quot;byteSecond&quot;" BrowseName="3:byteSecond" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;mySingleStruct&quot;" DataType="BYTE" AccessLevel="3">
+    <DisplayName>byteSecond</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"."mySingleStruct"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;mySingleStruct&quot;.&quot;intFirst&quot;" BrowseName="3:intFirst" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;mySingleStruct&quot;" DataType="INT" AccessLevel="3">
+    <DisplayName>intFirst</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"."mySingleStruct"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;mySingleStruct&quot;.&quot;intSecond&quot;" BrowseName="3:intSecond" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;mySingleStruct&quot;" DataType="INT" AccessLevel="3">
+    <DisplayName>intSecond</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"."mySingleStruct"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myStructArray&quot;" BrowseName="3:myStructArray" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;" DataType="ns=3;s=DT_&quot;udtDemo2&quot;" AccessLevel="3" ValueRank="1" ArrayDimensions="2">
+    <DisplayName>myStructArray</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=62</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myStructArray&quot;[0]" BrowseName="3:0" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myStructArray&quot;" DataType="ns=3;s=DT_&quot;udtDemo2&quot;" AccessLevel="3">
+    <DisplayName>0</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">ns=3;s=VT_"udtDemo2"</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"."myStructArray"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myStructArray&quot;[0].&quot;byteFirst&quot;" BrowseName="3:byteFirst" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myStructArray&quot;[0]" DataType="BYTE" AccessLevel="3">
+    <DisplayName>byteFirst</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"."myStructArray"[0]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myStructArray&quot;[0].&quot;byteSecond&quot;" BrowseName="3:byteSecond" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myStructArray&quot;[0]" DataType="BYTE" AccessLevel="3">
+    <DisplayName>byteSecond</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"."myStructArray"[0]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myStructArray&quot;[0].&quot;intFirst&quot;" BrowseName="3:intFirst" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myStructArray&quot;[0]" DataType="INT" AccessLevel="3">
+    <DisplayName>intFirst</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"."myStructArray"[0]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myStructArray&quot;[0].&quot;intSecond&quot;" BrowseName="3:intSecond" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myStructArray&quot;[0]" DataType="INT" AccessLevel="3">
+    <DisplayName>intSecond</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"."myStructArray"[0]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myStructArray&quot;[1]" BrowseName="3:1" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myStructArray&quot;" DataType="ns=3;s=DT_&quot;udtDemo2&quot;" AccessLevel="3">
+    <DisplayName>1</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">ns=3;s=VT_"udtDemo2"</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"."myStructArray"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myStructArray&quot;[1].&quot;byteFirst&quot;" BrowseName="3:byteFirst" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myStructArray&quot;[1]" DataType="BYTE" AccessLevel="3">
+    <DisplayName>byteFirst</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"."myStructArray"[1]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myStructArray&quot;[1].&quot;byteSecond&quot;" BrowseName="3:byteSecond" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myStructArray&quot;[1]" DataType="BYTE" AccessLevel="3">
+    <DisplayName>byteSecond</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"."myStructArray"[1]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myStructArray&quot;[1].&quot;intFirst&quot;" BrowseName="3:intFirst" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myStructArray&quot;[1]" DataType="INT" AccessLevel="3">
+    <DisplayName>intFirst</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"."myStructArray"[1]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myStructArray&quot;[1].&quot;intSecond&quot;" BrowseName="3:intSecond" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myStructArray&quot;[1]" DataType="INT" AccessLevel="3">
+    <DisplayName>intSecond</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"."myStructArray"[1]</Reference>
+    </References>
+</UAVariable>
+<UADataType NodeId="ns=3;i=3014" BrowseName="3:STRING">
+    <DisplayName>STRING</DisplayName>
+    <Description>STRING data type saves several characters in a character string that can consist of up to 254 characters. In a character string all characters of the ASCII code are permitted.</Description>
+    <References>
+        <Reference ReferenceType="HasSubtype" IsForward="false">i=12</Reference>
+    </References>
+</UADataType>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;.&quot;myString&quot;" BrowseName="3:myString" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;instanceOfUdt&quot;" DataType="STRING" AccessLevel="3">
+    <DisplayName>myString</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."instanceOfUdt"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;" BrowseName="3:arrayOfUdts" ParentNodeId="ns=3;s=&quot;globalDB&quot;" DataType="ns=3;s=DT_&quot;udtDemo&quot;" AccessLevel="3" ValueRank="1" ArrayDimensions="2">
+    <DisplayName>arrayOfUdts</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=62</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0]" BrowseName="3:0" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;" DataType="ns=3;s=DT_&quot;udtDemo&quot;" AccessLevel="3">
+    <DisplayName>0</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">ns=3;s=VT_"udtDemo"</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;mySingleInt&quot;" BrowseName="3:mySingleInt" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0]" DataType="INT" AccessLevel="3">
+    <DisplayName>mySingleInt</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myByteArray&quot;" BrowseName="3:myByteArray" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0]" DataType="BYTE" AccessLevel="3" ValueRank="1" ArrayDimensions="2">
+    <DisplayName>myByteArray</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myByteArray&quot;[0]" BrowseName="3:0" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myByteArray&quot;" DataType="BYTE" AccessLevel="3">
+    <DisplayName>0</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]."myByteArray"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myByteArray&quot;[1]" BrowseName="3:1" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myByteArray&quot;" DataType="BYTE" AccessLevel="3">
+    <DisplayName>1</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]."myByteArray"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;mySingleStruct&quot;" BrowseName="3:mySingleStruct" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0]" DataType="ns=3;s=DT_&quot;udtDemo2&quot;" AccessLevel="3">
+    <DisplayName>mySingleStruct</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">ns=3;s=VT_"udtDemo2"</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;mySingleStruct&quot;.&quot;byteFirst&quot;" BrowseName="3:byteFirst" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;mySingleStruct&quot;" DataType="BYTE" AccessLevel="3">
+    <DisplayName>byteFirst</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]."mySingleStruct"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;mySingleStruct&quot;.&quot;byteSecond&quot;" BrowseName="3:byteSecond" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;mySingleStruct&quot;" DataType="BYTE" AccessLevel="3">
+    <DisplayName>byteSecond</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]."mySingleStruct"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;mySingleStruct&quot;.&quot;intFirst&quot;" BrowseName="3:intFirst" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;mySingleStruct&quot;" DataType="INT" AccessLevel="3">
+    <DisplayName>intFirst</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]."mySingleStruct"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;mySingleStruct&quot;.&quot;intSecond&quot;" BrowseName="3:intSecond" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;mySingleStruct&quot;" DataType="INT" AccessLevel="3">
+    <DisplayName>intSecond</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]."mySingleStruct"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myStructArray&quot;" BrowseName="3:myStructArray" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0]" DataType="ns=3;s=DT_&quot;udtDemo2&quot;" AccessLevel="3" ValueRank="1" ArrayDimensions="2">
+    <DisplayName>myStructArray</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=62</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myStructArray&quot;[0]" BrowseName="3:0" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myStructArray&quot;" DataType="ns=3;s=DT_&quot;udtDemo2&quot;" AccessLevel="3">
+    <DisplayName>0</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">ns=3;s=VT_"udtDemo2"</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]."myStructArray"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myStructArray&quot;[0].&quot;byteFirst&quot;" BrowseName="3:byteFirst" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myStructArray&quot;[0]" DataType="BYTE" AccessLevel="3">
+    <DisplayName>byteFirst</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]."myStructArray"[0]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myStructArray&quot;[0].&quot;byteSecond&quot;" BrowseName="3:byteSecond" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myStructArray&quot;[0]" DataType="BYTE" AccessLevel="3">
+    <DisplayName>byteSecond</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]."myStructArray"[0]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myStructArray&quot;[0].&quot;intFirst&quot;" BrowseName="3:intFirst" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myStructArray&quot;[0]" DataType="INT" AccessLevel="3">
+    <DisplayName>intFirst</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]."myStructArray"[0]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myStructArray&quot;[0].&quot;intSecond&quot;" BrowseName="3:intSecond" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myStructArray&quot;[0]" DataType="INT" AccessLevel="3">
+    <DisplayName>intSecond</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]."myStructArray"[0]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myStructArray&quot;[1]" BrowseName="3:1" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myStructArray&quot;" DataType="ns=3;s=DT_&quot;udtDemo2&quot;" AccessLevel="3">
+    <DisplayName>1</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">ns=3;s=VT_"udtDemo2"</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]."myStructArray"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myStructArray&quot;[1].&quot;byteFirst&quot;" BrowseName="3:byteFirst" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myStructArray&quot;[1]" DataType="BYTE" AccessLevel="3">
+    <DisplayName>byteFirst</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]."myStructArray"[1]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myStructArray&quot;[1].&quot;byteSecond&quot;" BrowseName="3:byteSecond" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myStructArray&quot;[1]" DataType="BYTE" AccessLevel="3">
+    <DisplayName>byteSecond</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]."myStructArray"[1]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myStructArray&quot;[1].&quot;intFirst&quot;" BrowseName="3:intFirst" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myStructArray&quot;[1]" DataType="INT" AccessLevel="3">
+    <DisplayName>intFirst</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]."myStructArray"[1]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myStructArray&quot;[1].&quot;intSecond&quot;" BrowseName="3:intSecond" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myStructArray&quot;[1]" DataType="INT" AccessLevel="3">
+    <DisplayName>intSecond</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]."myStructArray"[1]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0].&quot;myString&quot;" BrowseName="3:myString" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[0]" DataType="STRING" AccessLevel="3">
+    <DisplayName>myString</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[0]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1]" BrowseName="3:1" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;" DataType="ns=3;s=DT_&quot;udtDemo&quot;" AccessLevel="3">
+    <DisplayName>1</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">ns=3;s=VT_"udtDemo"</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;mySingleInt&quot;" BrowseName="3:mySingleInt" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1]" DataType="INT" AccessLevel="3">
+    <DisplayName>mySingleInt</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myByteArray&quot;" BrowseName="3:myByteArray" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1]" DataType="BYTE" AccessLevel="3" ValueRank="1" ArrayDimensions="2">
+    <DisplayName>myByteArray</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myByteArray&quot;[0]" BrowseName="3:0" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myByteArray&quot;" DataType="BYTE" AccessLevel="3">
+    <DisplayName>0</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]."myByteArray"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myByteArray&quot;[1]" BrowseName="3:1" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myByteArray&quot;" DataType="BYTE" AccessLevel="3">
+    <DisplayName>1</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]."myByteArray"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;mySingleStruct&quot;" BrowseName="3:mySingleStruct" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1]" DataType="ns=3;s=DT_&quot;udtDemo2&quot;" AccessLevel="3">
+    <DisplayName>mySingleStruct</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">ns=3;s=VT_"udtDemo2"</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;mySingleStruct&quot;.&quot;byteFirst&quot;" BrowseName="3:byteFirst" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;mySingleStruct&quot;" DataType="BYTE" AccessLevel="3">
+    <DisplayName>byteFirst</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]."mySingleStruct"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;mySingleStruct&quot;.&quot;byteSecond&quot;" BrowseName="3:byteSecond" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;mySingleStruct&quot;" DataType="BYTE" AccessLevel="3">
+    <DisplayName>byteSecond</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]."mySingleStruct"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;mySingleStruct&quot;.&quot;intFirst&quot;" BrowseName="3:intFirst" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;mySingleStruct&quot;" DataType="INT" AccessLevel="3">
+    <DisplayName>intFirst</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]."mySingleStruct"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;mySingleStruct&quot;.&quot;intSecond&quot;" BrowseName="3:intSecond" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;mySingleStruct&quot;" DataType="INT" AccessLevel="3">
+    <DisplayName>intSecond</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]."mySingleStruct"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myStructArray&quot;" BrowseName="3:myStructArray" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1]" DataType="ns=3;s=DT_&quot;udtDemo2&quot;" AccessLevel="3" ValueRank="1" ArrayDimensions="2">
+    <DisplayName>myStructArray</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=62</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myStructArray&quot;[0]" BrowseName="3:0" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myStructArray&quot;" DataType="ns=3;s=DT_&quot;udtDemo2&quot;" AccessLevel="3">
+    <DisplayName>0</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">ns=3;s=VT_"udtDemo2"</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]."myStructArray"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myStructArray&quot;[0].&quot;byteFirst&quot;" BrowseName="3:byteFirst" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myStructArray&quot;[0]" DataType="BYTE" AccessLevel="3">
+    <DisplayName>byteFirst</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]."myStructArray"[0]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myStructArray&quot;[0].&quot;byteSecond&quot;" BrowseName="3:byteSecond" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myStructArray&quot;[0]" DataType="BYTE" AccessLevel="3">
+    <DisplayName>byteSecond</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]."myStructArray"[0]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myStructArray&quot;[0].&quot;intFirst&quot;" BrowseName="3:intFirst" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myStructArray&quot;[0]" DataType="INT" AccessLevel="3">
+    <DisplayName>intFirst</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]."myStructArray"[0]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myStructArray&quot;[0].&quot;intSecond&quot;" BrowseName="3:intSecond" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myStructArray&quot;[0]" DataType="INT" AccessLevel="3">
+    <DisplayName>intSecond</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]."myStructArray"[0]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myStructArray&quot;[1]" BrowseName="3:1" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myStructArray&quot;" DataType="ns=3;s=DT_&quot;udtDemo2&quot;" AccessLevel="3">
+    <DisplayName>1</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">ns=3;s=VT_"udtDemo2"</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]."myStructArray"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myStructArray&quot;[1].&quot;byteFirst&quot;" BrowseName="3:byteFirst" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myStructArray&quot;[1]" DataType="BYTE" AccessLevel="3">
+    <DisplayName>byteFirst</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]."myStructArray"[1]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myStructArray&quot;[1].&quot;byteSecond&quot;" BrowseName="3:byteSecond" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myStructArray&quot;[1]" DataType="BYTE" AccessLevel="3">
+    <DisplayName>byteSecond</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]."myStructArray"[1]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myStructArray&quot;[1].&quot;intFirst&quot;" BrowseName="3:intFirst" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myStructArray&quot;[1]" DataType="INT" AccessLevel="3">
+    <DisplayName>intFirst</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]."myStructArray"[1]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myStructArray&quot;[1].&quot;intSecond&quot;" BrowseName="3:intSecond" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myStructArray&quot;[1]" DataType="INT" AccessLevel="3">
+    <DisplayName>intSecond</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]."myStructArray"[1]</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1].&quot;myString&quot;" BrowseName="3:myString" ParentNodeId="ns=3;s=&quot;globalDB&quot;.&quot;arrayOfUdts&quot;[1]" DataType="STRING" AccessLevel="3">
+    <DisplayName>myString</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s="globalDB"."arrayOfUdts"[1]</Reference>
+    </References>
+</UAVariable>
+<UADataType NodeId="ns=3;s=DT_&quot;udtDemo&quot;" BrowseName="3:udtDemo">
+    <DisplayName>udtDemo</DisplayName>
+    <References>
+        <Reference ReferenceType="HasSubtype" IsForward="false">ns=3;i=3400</Reference>
+    </References>
+    <Definition Name="3:udtDemo">
+        <Field DataType="INT" Name="mySingleInt" />
+        <Field DataType="BYTE" Name="myByteArray" ValueRank="1" />
+        <Field DataType="ns=3;s=DT_&quot;udtDemo2&quot;" Name="mySingleStruct" />
+        <Field DataType="ns=3;s=DT_&quot;udtDemo2&quot;" Name="myStructArray" ValueRank="1" />
+        <Field DataType="STRING" Name="myString" />
+    </Definition>
+</UADataType>
+<UAVariableType NodeId="ns=3;s=VT_&quot;udtDemo&quot;" BrowseName="3:udtDemo" DataType="ns=3;s=DT_&quot;udtDemo&quot;">
+    <DisplayName>udtDemo</DisplayName>
+    <References>
+        <Reference ReferenceType="HasSubtype" IsForward="false">ns=3;i=2400</Reference>
+    </References>
+</UAVariableType>
+<UAVariable NodeId="ns=3;s=V_&quot;udtDemo&quot;.&quot;mySingleInt&quot;" BrowseName="3:mySingleInt" ParentNodeId="ns=3;s=VT_&quot;udtDemo&quot;" DataType="INT">
+    <DisplayName>mySingleInt</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=VT_"udtDemo"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=V_&quot;udtDemo&quot;.&quot;myByteArray&quot;" BrowseName="3:myByteArray" ParentNodeId="ns=3;s=VT_&quot;udtDemo&quot;" DataType="BYTE" ValueRank="1" ArrayDimensions="2">
+    <DisplayName>myByteArray</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=VT_"udtDemo"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=V_&quot;udtDemo&quot;.&quot;mySingleStruct&quot;" BrowseName="3:mySingleStruct" ParentNodeId="ns=3;s=VT_&quot;udtDemo&quot;" DataType="ns=3;s=DT_&quot;udtDemo2&quot;">
+    <DisplayName>mySingleStruct</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">ns=3;s=VT_"udtDemo2"</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=VT_"udtDemo"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=V_&quot;udtDemo&quot;.&quot;myStructArray&quot;" BrowseName="3:myStructArray" ParentNodeId="ns=3;s=VT_&quot;udtDemo&quot;" DataType="ns=3;s=DT_&quot;udtDemo2&quot;" ValueRank="1" ArrayDimensions="2">
+    <DisplayName>myStructArray</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=62</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=VT_"udtDemo"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=V_&quot;udtDemo&quot;.&quot;myString&quot;" BrowseName="3:myString" ParentNodeId="ns=3;s=VT_&quot;udtDemo&quot;" DataType="STRING">
+    <DisplayName>myString</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=VT_"udtDemo"</Reference>
+    </References>
+</UAVariable>
+<UADataType NodeId="ns=3;s=DT_&quot;udtDemo2&quot;" BrowseName="3:udtDemo2">
+    <DisplayName>udtDemo2</DisplayName>
+    <References>
+        <Reference ReferenceType="HasSubtype" IsForward="false">ns=3;i=3400</Reference>
+    </References>
+    <Definition Name="3:udtDemo2">
+        <Field DataType="BYTE" Name="byteFirst" />
+        <Field DataType="BYTE" Name="byteSecond" />
+        <Field DataType="INT" Name="intFirst" />
+        <Field DataType="INT" Name="intSecond" />
+    </Definition>
+</UADataType>
+<UAVariableType NodeId="ns=3;s=VT_&quot;udtDemo2&quot;" BrowseName="3:udtDemo2" DataType="ns=3;s=DT_&quot;udtDemo2&quot;">
+    <DisplayName>udtDemo2</DisplayName>
+    <References>
+        <Reference ReferenceType="HasSubtype" IsForward="false">ns=3;i=2400</Reference>
+    </References>
+</UAVariableType>
+<UAVariable NodeId="ns=3;s=V_&quot;udtDemo2&quot;.&quot;byteFirst&quot;" BrowseName="3:byteFirst" ParentNodeId="ns=3;s=VT_&quot;udtDemo2&quot;" DataType="BYTE">
+    <DisplayName>byteFirst</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=VT_"udtDemo2"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=V_&quot;udtDemo2&quot;.&quot;byteSecond&quot;" BrowseName="3:byteSecond" ParentNodeId="ns=3;s=VT_&quot;udtDemo2&quot;" DataType="BYTE">
+    <DisplayName>byteSecond</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=VT_"udtDemo2"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=V_&quot;udtDemo2&quot;.&quot;intFirst&quot;" BrowseName="3:intFirst" ParentNodeId="ns=3;s=VT_&quot;udtDemo2&quot;" DataType="INT">
+    <DisplayName>intFirst</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=VT_"udtDemo2"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=V_&quot;udtDemo2&quot;.&quot;intSecond&quot;" BrowseName="3:intSecond" ParentNodeId="ns=3;s=VT_&quot;udtDemo2&quot;" DataType="INT">
+    <DisplayName>intSecond</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=VT_"udtDemo2"</Reference>
+    </References>
+</UAVariable>
+<UAVariable NodeId="ns=3;i=6002" BrowseName="NamespaceUri" ParentNodeId="ns=3;i=6001" DataType="String">
+    <DisplayName>NamespaceUri</DisplayName>
+    <Description>A URI that uniquely identifies the dictionary.</Description>
+    <References>
+        <Reference ReferenceType="HasProperty" IsForward="false">ns=3;i=6001</Reference>
+        <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Value>
+        <uax:String xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd">http://www.siemens.com/simatic-s7-opcua</uax:String>
+    </Value>
+</UAVariable>
+<UAVariable NodeId="ns=3;i=6001" BrowseName="3:SimaticStructures" ParentNodeId="i=93" DataType="ByteString">
+    <DisplayName>SimaticStructures</DisplayName>
+    <Description>Collects the data type descriptions of http://www.siemens.com/simatic-s7-opcua</Description>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=72</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">i=93</Reference>
+        <Reference ReferenceType="HasProperty">ns=3;i=6002</Reference>
+    </References>
+    <Value>
+        <uax:ByteString xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48b3BjOlR5cGVEaWN0aW9uYXJ5IERlZmF1bHRCeXRlT3JkZXI9IkxpdHRsZUVuZGlhbiIgVGFyZ2V0TmFtZXNwYWNlPSJodHRwOi8vd3d3LnNpZW1lbnMuY29tL3NpbWF0aWMtczctb3BjdWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOm9wYz0iaHR0cDovL29wY2ZvdW5kYXRpb24ub3JnL0JpbmFyeVNjaGVtYS8iIHhtbG5zOnVhPSJodHRwOi8vb3BjZm91bmRhdGlvbi5vcmcvVUEvIiB4bWxuczp0bnM9Imh0dHA6Ly93d3cuc2llbWVucy5jb20vc2ltYXRpYy1zNy1vcGN1YSI+PG9wYzpJbXBvcnQgTmFtZXNwYWNlPSJodHRwOi8vb3BjZm91bmRhdGlvbi5vcmcvVUEvIiBMb2NhdGlvbj0iT3BjLlVhLkJpbmFyeVNjaGVtYS5ic2QiIC8+PG9wYzpTdHJ1Y3R1cmVkVHlwZSBCYXNlVHlwZT0idWE6RXh0ZW5zaW9uT2JqZWN0IiBOYW1lPSImcXVvdDtnbG9iYWxEQiZxdW90Oy4mcXVvdDtVbnR5cGVkU3RydWN0JnF1b3Q7Ij48b3BjOkZpZWxkIFR5cGVOYW1lPSJvcGM6SW50MTYiIE5hbWU9InN0cnVjdEludCIgLz48L29wYzpTdHJ1Y3R1cmVkVHlwZT48b3BjOlN0cnVjdHVyZWRUeXBlIEJhc2VUeXBlPSJ1YTpFeHRlbnNpb25PYmplY3QiIE5hbWU9IiZxdW90O3VkdERlbW8mcXVvdDsiPjxvcGM6RmllbGQgVHlwZU5hbWU9Im9wYzpJbnQzMiIgTmFtZT0ibXlCeXRlQXJyYXlfU2l6ZSIgLz48b3BjOkZpZWxkIFR5cGVOYW1lPSJvcGM6Qnl0ZSIgTmFtZT0ibXlCeXRlQXJyYXkiIExlbmd0aEZpZWxkPSJteUJ5dGVBcnJheV9TaXplIiAvPjxvcGM6RmllbGQgVHlwZU5hbWU9Im9wYzpJbnQxNiIgTmFtZT0ibXlTaW5nbGVJbnQiIC8+PG9wYzpGaWVsZCBUeXBlTmFtZT0idG5zOiZxdW90O3VkdERlbW8yJnF1b3Q7IiBOYW1lPSJteVNpbmdsZVN0cnVjdCIgLz48b3BjOkZpZWxkIFR5cGVOYW1lPSJvcGM6SW50MzIiIE5hbWU9Im15U3RydWN0QXJyYXlfU2l6ZSIgLz48b3BjOkZpZWxkIFR5cGVOYW1lPSJ0bnM6JnF1b3Q7dWR0RGVtbzImcXVvdDsiIE5hbWU9Im15U3RydWN0QXJyYXkiIExlbmd0aEZpZWxkPSJteVN0cnVjdEFycmF5X1NpemUiIC8+PG9wYzpGaWVsZCBUeXBlTmFtZT0ib3BjOlN0cmluZyIgTmFtZT0ibXlTdHJpbmciIC8+PC9vcGM6U3RydWN0dXJlZFR5cGU+PG9wYzpTdHJ1Y3R1cmVkVHlwZSBCYXNlVHlwZT0idWE6RXh0ZW5zaW9uT2JqZWN0IiBOYW1lPSImcXVvdDt1ZHREZW1vMiZxdW90OyI+PG9wYzpGaWVsZCBUeXBlTmFtZT0ib3BjOkJ5dGUiIE5hbWU9ImJ5dGVGaXJzdCIgLz48b3BjOkZpZWxkIFR5cGVOYW1lPSJvcGM6Qnl0ZSIgTmFtZT0iYnl0ZVNlY29uZCIgLz48b3BjOkZpZWxkIFR5cGVOYW1lPSJvcGM6SW50MTYiIE5hbWU9ImludEZpcnN0IiAvPjxvcGM6RmllbGQgVHlwZU5hbWU9Im9wYzpJbnQxNiIgTmFtZT0iaW50U2Vjb25kIiAvPjwvb3BjOlN0cnVjdHVyZWRUeXBlPjwvb3BjOlR5cGVEaWN0aW9uYXJ5Pg==</uax:ByteString>
+    </Value>
+</UAVariable>
+<UAVariable NodeId="ns=3;s=TD_&quot;globalDB&quot;.&quot;UntypedStruct&quot;" BrowseName="3:&quot;globalDB&quot;.&quot;UntypedStruct&quot;" ParentNodeId="ns=3;i=6001" DataType="String">
+    <DisplayName>"globalDB"."UntypedStruct"</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=69</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;i=6001</Reference>
+    </References>
+    <Value>
+        <uax:String xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd">"globalDB"."UntypedStruct"</uax:String>
+    </Value>
+</UAVariable>
+<UAObject NodeId="ns=3;s=TE_&quot;globalDB&quot;.&quot;UntypedStruct&quot;" BrowseName="Default Binary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+        <Reference ReferenceType="HasDescription">ns=3;s=TD_"globalDB"."UntypedStruct"</Reference>
+        <Reference ReferenceType="HasEncoding" IsForward="false">ns=3;s=DT_"globalDB"."UntypedStruct"</Reference>
+    </References>
+</UAObject>
+<UAVariable NodeId="ns=3;s=TD_&quot;udtDemo&quot;" BrowseName="3:&quot;udtDemo&quot;" ParentNodeId="ns=3;i=6001" DataType="String">
+    <DisplayName>"udtDemo"</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=69</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;i=6001</Reference>
+    </References>
+    <Value>
+        <uax:String xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd">"udtDemo"</uax:String>
+    </Value>
+</UAVariable>
+<UAObject NodeId="ns=3;s=TE_&quot;udtDemo&quot;" BrowseName="Default Binary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+        <Reference ReferenceType="HasDescription">ns=3;s=TD_"udtDemo"</Reference>
+        <Reference ReferenceType="HasEncoding" IsForward="false">ns=3;s=DT_"udtDemo"</Reference>
+    </References>
+</UAObject>
+<UAVariable NodeId="ns=3;s=TD_&quot;udtDemo2&quot;" BrowseName="3:&quot;udtDemo2&quot;" ParentNodeId="ns=3;i=6001" DataType="String">
+    <DisplayName>"udtDemo2"</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=69</Reference>
+        <Reference ReferenceType="HasComponent" IsForward="false">ns=3;i=6001</Reference>
+    </References>
+    <Value>
+        <uax:String xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd">"udtDemo2"</uax:String>
+    </Value>
+</UAVariable>
+<UAObject NodeId="ns=3;s=TE_&quot;udtDemo2&quot;" BrowseName="Default Binary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+        <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+        <Reference ReferenceType="HasDescription">ns=3;s=TD_"udtDemo2"</Reference>
+        <Reference ReferenceType="HasEncoding" IsForward="false">ns=3;s=DT_"udtDemo2"</Reference>
+    </References>
+</UAObject>
+</UANodeSet>
